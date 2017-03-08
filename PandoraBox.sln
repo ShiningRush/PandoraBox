@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PandoraBox", "src\PandoraBox.Extension\PandoraBox.csproj", "{63F1DE6D-27BE-4BBC-B430-25865582624D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1754498C-D548-4323-9DBA-4391F60A5B23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A0C11727-5D72-40C0-8FE6-1CE9266DC576}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PandoraBox.Tests", "test\PandoraBox.Test\PandoraBox.Tests.csproj", "{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63F1DE6D-27BE-4BBC-B430-25865582624D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F1DE6D-27BE-4BBC-B430-25865582624D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F1DE6D-27BE-4BBC-B430-25865582624D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F1DE6D-27BE-4BBC-B430-25865582624D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63F1DE6D-27BE-4BBC-B430-25865582624D} = {A0C11727-5D72-40C0-8FE6-1CE9266DC576}
+		{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7} = {1754498C-D548-4323-9DBA-4391F60A5B23}
+	EndGlobalSection
+EndGlobal
