@@ -8,6 +8,8 @@ namespace PandoraBox.DataBuilds.Formatter
 {
     public interface IFormatter
     {
-
+        void Begin(string filePath);
+        void Write(string content);
+        void Save();
     }
 }
