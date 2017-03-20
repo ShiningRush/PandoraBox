@@ -9,6 +9,7 @@ namespace PandoraBox.DataBuilds.Formatter
 {
     public class DataBuilder
     {
+        // filepath
         private readonly string _filePath;
 
         public DataBuilder(string filePath)
