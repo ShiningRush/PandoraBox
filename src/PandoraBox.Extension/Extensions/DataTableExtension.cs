@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PandoraBox.Runtime;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -10,18 +11,18 @@ namespace PandoraBox.Extensions
 {
     public static class DataTableExtension
     {
-        public static List<TTarget> Cast<TTarget>(this DataTable @this) where TTarget : new()
+        public static List<TTarget> Cast<TTarget>(this DataTable @this, Type markAttr = null) where TTarget : new()
         {
-            var properties = typeof(TTarget).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            var properties = ReflectHelper.GetMarkedProperty<TTarget>(markAttr);
             var result = new List<TTarget>();
             foreach(DataRow eachRow in @this.Rows)
             {
                 var newRow = new TTarget();
                 foreach (var targetProperty in properties)
                 {
-                    if (@this.Columns.Contains(targetProperty.Name))
+                    if (@this.Columns.Contains(targetProperty.Name) && eachRow[targetProperty.Name] != DBNull.Value)
                     {
-                        targetProperty.SetValue(newRow, eachRow[targetProperty.Name]);
+                        newRow.SetPropertyValue(targetProperty, eachRow[targetProperty.Name]);
                     }
                 }
                 result.Add(newRow);

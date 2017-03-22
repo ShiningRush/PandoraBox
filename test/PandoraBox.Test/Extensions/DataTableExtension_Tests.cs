@@ -2,38 +2,32 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data;
 using PandoraBox.Extensions;
+using PandoraBox.DataBuilds.Formatter;
 
 namespace PandoraBox.Test.Extensions
 {
-    public class Student
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-
-        public void GetAge()
-        {
-
-        }
-    }
 
     [TestClass]
     public class DataTableExtension_Tests
     {
         [TestMethod]
-        public void ShouldGetList()
+        public void Should_Get_CorrectList()
         {
-            var dt = new DataTable();
-            dt.Columns.AddRange(new DataColumn[] { new DataColumn("Name", typeof(string)), new DataColumn("Age", typeof(int)) });
-            var col1 = dt.NewRow();
-            col1["Name"] = "John";
-            col1["Age"] = 16;
-            dt.Rows.Add(col1);
-            var col2 = dt.NewRow();
-            col2["Name"] = "Danny";
-            col2["Age"] = 18;
-            dt.Rows.Add(col2);
+            var dt = TestDatas.StudentsTable;
             var students = dt.Cast<Student>();
-            Assert.AreEqual(dt.Rows.Count, students.Count);
+
+            CollectionAssert.AreEqual(students, TestDatas.Students);
+        }
+
+        [TestMethod]
+        public void Should_Get_Marked_CorrectList()
+        {
+            var dt = TestDatas.TeachersTable;
+            var teachers = dt.Cast<Teacher>(typeof(MarkAttribute));
+            var list = TestDatas.TeachersTable.Cast<Teacher>();
+            list.ForEach(p => p.Salary = default(decimal));
+
+            CollectionAssert.AreEqual(teachers, list);
         }
     }
 }

@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PandoraBox.Test</RootNamespace>
     <AssemblyName>PandoraBox.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -16,6 +16,7 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,8 +54,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DataBuilds\Formatter\ExcelFormatter_Tests.cs" />
     <Compile Include="Extensions\DataTableExtension_Tests.cs" />
+    <Compile Include="Extensions\IEnumberableExtension_Tests.cs" />
+    <Compile Include="Extensions\StringExtension_Tests.cs" />
+    <Compile Include="Extensions\ObjectExtension_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestDatas.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\PandoraBox.Extension\PandoraBox.csproj">
