@@ -24,5 +24,10 @@ namespace PandoraBox.Extensions
         {
             return ReflectHelper.GetPropertyValue<T>(property, @this);
         }
+
+        public static List<PropertyInfo> GetMarkedProperty(this object @this, Type exportAttr)
+        {
+            return ReflectHelper.GetMarkedProperty(@this.GetType(), exportAttr);
+        }
     }
 }

@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Reflection;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
+using System.Collections.Generic;
+using System;
 using PandoraBox.Extensions;
+
 
 namespace PandoraBox.Runtime
 {
-    internal class ReflectHelper
+    public class ReflectHelper
     {
         public static void SetPropertyValue(PropertyInfo property, object settingObj, object settingValue)
         {
@@ -24,11 +24,15 @@ namespace PandoraBox.Runtime
         {
             return (T)Convert.ChangeType(property.GetValue(gettingObj), typeof(T));
         }
+        public static List<PropertyInfo> GetMarkedProperty(Type srcType,Type exportAttr)
+        {
+            return srcType.GetTypeInfo().DeclaredProperties
+                        .IfWhere(exportAttr != null, p => p.GetCustomAttribute(exportAttr) != null).ToList();
+        }
 
         public static List<PropertyInfo> GetMarkedProperty<T>(Type exportAttr)
         {
-            return typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance)
-                        .IfWhere(exportAttr != null, p => p.GetCustomAttribute(exportAttr) != null).ToList();
+            return GetMarkedProperty(typeof(T), exportAttr);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using PandoraBox.DataBuilds.Formatter;
 using PandoraBox.Runtime;
+using PandoraBox.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PandoraBox.Extensions
+namespace PandoraBox.DataBuilds.Extensions
 {
     public static class IEnumberableExtension
     {
@@ -35,15 +36,6 @@ namespace PandoraBox.Extensions
             return dt;
         }
 
-        public static IEnumerable<T> IfWhere<T>(this IEnumerable<T> @this, bool condition, Func<T, bool> predicate)
-        {
-            if (condition)
-            {
-                return @this.Where(predicate);
-            }
-
-            return @this;
-        }
 
         public static void ExportExcelFile<T>(this IEnumerable<T> @this, string filePath, bool hasTitle = true, char separator = ',')
         {

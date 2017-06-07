@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PandoraBox", "src\PandoraBox.Extension\PandoraBox.csproj", "{63F1DE6D-27BE-4BBC-B430-25865582624D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1754498C-D548-4323-9DBA-4391F60A5B23}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A0C11727-5D72-40C0-8FE6-1CE9266DC576}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandoraBox", "src\PandoraBox\PandoraBox.csproj", "{E94F4398-E4A1-4FAB-A08E-C3D1CCCFFD5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PandoraBox.DataBuilds", "src\PandoraBox.DataBuilds\PandoraBox.DataBuilds.csproj", "{63F1DE6D-27BE-4BBC-B430-25865582624D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PandoraBox.Tests", "test\PandoraBox.Test\PandoraBox.Tests.csproj", "{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PandoraBox.DataBuilds.Tests", "test\PandoraBox.DataBuilds.Tests\PandoraBox.DataBuilds.Tests.csproj", "{5C7C444B-0618-476D-962F-1115F995022D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +21,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E94F4398-E4A1-4FAB-A08E-C3D1CCCFFD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E94F4398-E4A1-4FAB-A08E-C3D1CCCFFD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E94F4398-E4A1-4FAB-A08E-C3D1CCCFFD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E94F4398-E4A1-4FAB-A08E-C3D1CCCFFD5C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{63F1DE6D-27BE-4BBC-B430-25865582624D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{63F1DE6D-27BE-4BBC-B430-25865582624D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63F1DE6D-27BE-4BBC-B430-25865582624D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -25,12 +33,18 @@ Global
 		{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7C444B-0618-476D-962F-1115F995022D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7C444B-0618-476D-962F-1115F995022D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7C444B-0618-476D-962F-1115F995022D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7C444B-0618-476D-962F-1115F995022D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{E94F4398-E4A1-4FAB-A08E-C3D1CCCFFD5C} = {A0C11727-5D72-40C0-8FE6-1CE9266DC576}
 		{63F1DE6D-27BE-4BBC-B430-25865582624D} = {A0C11727-5D72-40C0-8FE6-1CE9266DC576}
 		{78FD30CB-6EAF-45B1-B1D9-50B7736E30F7} = {1754498C-D548-4323-9DBA-4391F60A5B23}
+		{5C7C444B-0618-476D-962F-1115F995022D} = {1754498C-D548-4323-9DBA-4391F60A5B23}
 	EndGlobalSection
 EndGlobal

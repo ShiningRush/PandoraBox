@@ -4,24 +4,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PandoraBox.DataBuilds.Formatter;
 
-namespace PandoraBox.Test
+namespace PandoraBox.DataBuilds.Tests
 {
-    [AttributeUsage(AttributeTargets.Property)]
-    public class MarkAttribute : Attribute
-    {
-        public string MarkName { get; private set; }
-
-        public MarkAttribute()
-        {
-        }
-
-        public MarkAttribute(string markName)
-        {
-            this.MarkName = markName;
-        }
-    }
-
     public class Student
     {
         public string Name { get; set; }

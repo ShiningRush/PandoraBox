@@ -54,8 +54,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DataBuilds\Formatter\ExcelFormatter_Tests.cs" />
-    <Compile Include="Extensions\DataTableExtension_Tests.cs" />
     <Compile Include="Extensions\IEnumberableExtension_Tests.cs" />
     <Compile Include="Extensions\StringExtension_Tests.cs" />
     <Compile Include="Extensions\ObjectExtension_Tests.cs" />
@@ -63,8 +61,8 @@
     <Compile Include="TestDatas.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\PandoraBox.Extension\PandoraBox.csproj">
-      <Project>{63f1de6d-27be-4bbc-b430-25865582624d}</Project>
+    <ProjectReference Include="..\..\src\PandoraBox\PandoraBox.csproj">
+      <Project>{e94f4398-e4a1-4fab-a08e-c3d1cccffd5c}</Project>
       <Name>PandoraBox</Name>
     </ProjectReference>
   </ItemGroup>

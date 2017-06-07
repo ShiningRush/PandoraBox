@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PandoraBox.DataBuilds.Extensions;
 using PandoraBox.DataBuilds.Formatter;
-using PandoraBox.Extensions;
+using PandoraBox.DataBuilds.Tests;
 using System;
 using System.Collections.Generic;
 using System.Linq;

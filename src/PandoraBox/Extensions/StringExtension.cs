@@ -12,7 +12,5 @@ namespace PandoraBox.Extensions
         {
             return string.IsNullOrEmpty(@this);
         }
-
-
     }
 }

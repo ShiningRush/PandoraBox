@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data;
-using PandoraBox.Extensions;
+using PandoraBox.DataBuilds.Extensions;
+using PandoraBox.DataBuilds.Tests;
 using PandoraBox.DataBuilds.Formatter;
 
 namespace PandoraBox.Test.Extensions
